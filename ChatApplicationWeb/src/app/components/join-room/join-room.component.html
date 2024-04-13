@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-5">Welcome</h2>
+      <div class="text-center mb-5 text-dark">Please join a room to start chatting</div>
+      <div class="card my-5">
+        <form [formGroup]="joinRoomForm" class="card-body cardbody-color p-lg-5">
+          <div class="mb-3">
+            <input formControlName="user" type="text" class="form-control" id="displayname" aria-describedby="emailHelp"
+                   placeholder="Display name">
+          </div>
+          <div class="mb-3">
+            <input formControlName="room" type="text" class="form-control" id="roomname" placeholder="Room name">
+          </div>
+          <div class="text-center">
+            <button [disabled]="joinRoomForm.invalid" (click)="joinRoom()" type="submit" class="btn btn-primary px-5 mb-5 w-40">Join</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
